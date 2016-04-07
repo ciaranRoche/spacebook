@@ -103,6 +103,13 @@ public class Bootstrap extends Job
       User lisa = User.findByEmail("lisa@simpson.com");
       lisa.profilePicture = blob11;
       lisa.save();
+      
+      String thumbnail = "public/images/homer.gif";
+      Blob blob12 = new Blob();
+      blob12.set(new FileInputStream(thumbnail), MimeTypes.getContentType(thumbnail));
+      User homer2 = User.findByEmail("homer@simpson.com");
+      homer2.thumbnailPicture = blob12;
+      homer2.save();
     }
   }
 }
