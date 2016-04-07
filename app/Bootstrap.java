@@ -104,6 +104,8 @@ public class Bootstrap extends Job
       lisa.profilePicture = blob11;
       lisa.save();
       
+      /*--- Thumbnail preloads ---*/
+      
       String thumbnail = "public/images/homer.gif";
       Blob blob12 = new Blob();
       blob12.set(new FileInputStream(thumbnail), MimeTypes.getContentType(thumbnail));
