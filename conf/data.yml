@@ -16,21 +16,80 @@ User(homer):
     lastName: Simpson
     email: homer@simpson.com
     password: secret
-    following: 
-              - marge
-              - lisa
 
+              
 User(bart):
     firstName: Bart
     lastName: Simpson
     email: bart@simpson.com
     password: secret
-
+    nationality: American
+    age: 10
+    
 User(maggie):
     firstName: Maggie
     lastName: Simpson
     email: maggie@simpson.com
     password: secret
+    nationality: American
+    age: 2
+    
+User(abe):
+    firstName: Abe(Grandpa)
+    lastName: Simpson
+    email: abe@simpson.com
+    password: secret
+    nationality: American
+    age: 70
+    
+User(moe):
+    firstName: Moe
+    lastName: Szyslak
+    email: moe@simpson.com
+    password: secret
+    nationality: American
+    age: 52
+
+User(ned):
+    firstName: Ned
+    lastName: Flanders
+    email: ned@simpson.com
+    password: secret
+    nationality: American
+    age: 45
+    
+User(duffman):
+    firstName: Duff
+    lastName: Man
+    email: duff@simpson.com
+    password: secret
+    nationality: American
+    age: 35
+
+User(peter):
+    firstName: Peter
+    lastName: Griffen
+    email: peter@simpson.com
+    password: secret
+    nationality: American
+    age: 45
+
+User(krusty):
+    firstName: Krusty
+    lastName: The Clown
+    email: krusty@simpson.com
+    password: secret
+    nationality: American
+    age: 36
+    
+User(comic):
+    firstName: Comic
+    lastName: Book Guy
+    email: worstwebsiteever@simpson.com
+    password: secret
+    nationality: worst website ever
+    age: 37
+    
     
 Message(message1):
     from : marge
@@ -41,3 +100,49 @@ Message(message2):
     from : lisa
     to   : homer
     messageText: 'Get me outta here!'
+    
+Friendship(friend1):
+    sourceUser: homer
+    targetUser: marge
+    
+Friendship(friend2):
+    sourceUser: homer
+    targetUser: lisa
+
+Friendship(friend3):
+    sourceUser: marge
+    targetUser: homer
+
+Friendship(friend4):
+    sourceUser: bart
+    targetUser: homer
+
+Friendship(friend5):
+    sourceUser: homer
+    targetUser: bart
+
+User(homer):
+     firstName: Homer
+     lastName: Simpson
+     email: homer@simpson.com
+     password: secret
+     friendships:
+                 - friend1
+                 - friend2
+                 - friend5
+
+User(marge):
+    firstName: Marge
+    lastName: Simpson
+    email: marge@simpson.com
+    password: secret
+    friendships:
+                - friend3                
+                
+User(bart):
+    firstName: Bart
+    lastName: Simpson
+    email: bart@simpson.com
+    password: secret
+    friendships:
+                - friend4 
