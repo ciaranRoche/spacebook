@@ -20,6 +20,7 @@ public class Bootstrap extends Job
       Fixtures.deleteDatabase();
       Fixtures.loadModels("data.yml");
   
+      
       String photoName = "public/images/homer.gif";
       Blob blob = new Blob();
       blob.set(new FileInputStream(photoName), MimeTypes.getContentType(photoName));
@@ -106,12 +107,89 @@ public class Bootstrap extends Job
       
       /*--- Thumbnail preloads ---*/
       
-      String thumbnail = "public/images/homer.gif";
+      String thumbnail = "public/images/thumbnails/homer.gif";
       Blob blob12 = new Blob();
       blob12.set(new FileInputStream(thumbnail), MimeTypes.getContentType(thumbnail));
       User homer2 = User.findByEmail("homer@simpson.com");
       homer2.thumbnailPicture = blob12;
       homer2.save();
+      
+      String thumbnail1 = "public/images/thumbnails/abe.gif";
+      Blob blob13 = new Blob();
+      blob13.set(new FileInputStream(thumbnail1), MimeTypes.getContentType(thumbnail1));
+      User abe2 = User.findByEmail("abe@simpson.com");
+      abe2.thumbnailPicture = blob13;
+      abe2.save();
+      
+      String thumbnail2 = "public/images/thumbnails/bart.gif";
+      Blob blob14 = new Blob();
+      blob14.set(new FileInputStream(thumbnail2), MimeTypes.getContentType(thumbnail2));
+      User bart2 = User.findByEmail("bart@simpson.com");
+      bart2.thumbnailPicture = blob12;
+      bart2.save();
+      
+      String thumbnail3 = "public/images/thumbnails/ComicBookGuy.gif";
+      Blob blob15 = new Blob();
+      blob15.set(new FileInputStream(thumbnail3), MimeTypes.getContentType(thumbnail3));
+      User comic2 = User.findByEmail("worstwebsiteever@simpson.com");
+      comic2.thumbnailPicture = blob15;
+      comic2.save();
+      
+      String thumbnail4 = "public/images/thumbnails/duff.gif";
+      Blob blob16 = new Blob();
+      blob16.set(new FileInputStream(thumbnail4), MimeTypes.getContentType(thumbnail4));
+      User duff2 = User.findByEmail("duff@simpson.com");
+      duff2.thumbnailPicture = blob16;
+      duff2.save();
+      
+      String thumbnail5 = "public/images/thumbnails/krusty.gif";
+      Blob blob17 = new Blob();
+      blob17.set(new FileInputStream(thumbnail5), MimeTypes.getContentType(thumbnail5));
+      User krusty2 = User.findByEmail("krusty@simpson.com");
+      krusty2.thumbnailPicture = blob17;
+      krusty2.save();
+      
+      String thumbnail6 = "public/images/thumbnails/lisa.gif";
+      Blob blob18 = new Blob();
+      blob18.set(new FileInputStream(thumbnail6), MimeTypes.getContentType(thumbnail6));
+      User lisa2 = User.findByEmail("lisa@simpson.com");
+      lisa2.thumbnailPicture = blob18;
+      lisa2.save();
+      
+      String thumbnail7 = "public/images/thumbnails/maggie.gif";
+      Blob blob19 = new Blob();
+      blob19.set(new FileInputStream(thumbnail7), MimeTypes.getContentType(thumbnail7));
+      User maggie2 = User.findByEmail("maggie@simpson.com");
+      maggie2.thumbnailPicture = blob19;
+      maggie2.save();
+      
+      String thumbnail8 = "public/images/thumbnails/marge.gif";
+      Blob blob20 = new Blob();
+      blob20.set(new FileInputStream(thumbnail8), MimeTypes.getContentType(thumbnail8));
+      User marge2 = User.findByEmail("marge@simpson.com");
+      marge2.thumbnailPicture = blob20;
+      marge2.save();
+      
+      String thumbnail9 = "public/images/thumbnails/moe.gif";
+      Blob blob21 = new Blob();
+      blob21.set(new FileInputStream(thumbnail9), MimeTypes.getContentType(thumbnail9));
+      User moe2 = User.findByEmail("moe@simpson.com");
+      moe2.thumbnailPicture = blob19;
+      moe2.save();
+      
+      String thumbnail10 = "public/images/thumbnails/ned.gif";
+      Blob blob22 = new Blob();
+      blob22.set(new FileInputStream(thumbnail10), MimeTypes.getContentType(thumbnail10));
+      User ned2 = User.findByEmail("ned@simpson.com");
+      ned2.thumbnailPicture = blob22;
+      ned2.save();
+      
+      String thumbnail11 = "public/images/thumbnails/peter.gif";
+      Blob blob23 = new Blob();
+      blob23.set(new FileInputStream(thumbnail11), MimeTypes.getContentType(thumbnail11));
+      User peter2 = User.findByEmail("peter@simpson.com");
+      peter2.thumbnailPicture = blob23;
+      peter2.save();
     }
   }
 }
