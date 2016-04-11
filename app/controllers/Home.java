@@ -1,6 +1,7 @@
 package controllers;
 
 import play.*;
+import play.db.jpa.Blob;
 import play.mvc.*;
 
 import java.util.*;
@@ -23,4 +24,22 @@ public class Home extends Controller
     Logger.info("Dropping " + friend.email);
     index();
   }  
+  
+  public static void uploadPicture(Long id, Blob picture)
+  {
+    User user = User.findById(id);
+    user.profilePicture = picture;
+    user.save();
+    Logger.info("saving picture");
+    index();
+  } 
+  
+  public static void changeStatus(String statusText)
+  {
+    User user = Accounts.getLoggedInUser();
+    user.statusText = statusText;
+    user.save();
+    Logger.info("Status changed to " + statusText);
+    index();
+  }
 }

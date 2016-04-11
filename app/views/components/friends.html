@@ -1,12 +1,26 @@
 <section class="ui stacked segment">
-  <h4 class="ui inverted red block header">Friends (${user.friendships.size()})</h4>
-  <div class="ui list"> 
-    #{list items:user.friendships, as:'friendship'}
-      <div class="ui item"> 
-        <i class="user icon"></i>
-        <a href="/publicprofile/${friendship.targetUser.id}"> ${friendship.targetUser.firstName} ${friendship.targetUser.lastName} </a>
-         (<a href="/home/drop/${friendship.targetUser.id}"> drop </a>)
-      </div>
-    #{/list}
-  </div> 
-</section>  
+	<h4 id="headfont" class="ui blue block header">
+		<i class="users icon"></i>Friends (${user.friendships.size()})
+	</h4>
+	#{if user.friendships.size() > 0}
+	<table id="font" class="ui table segment">
+		<tbody>
+			#{list items:user.friendships, as:'friendship'}
+			<tr>
+				<td>
+					<div class="ui avatar image">
+						<img src="/profile/getthumbnail/${friendship.targetUser.id}">
+					</div>
+				</td>
+				<td><a href="/publicprofile/${friendship.targetUser.id}">
+						${friendship.targetUser.firstName}
+						${friendship.targetUser.lastName} </a></td>
+				<td>(<a href="/home/drop/${friendship.targetUser.id}"><i
+						class="remove user icon"></i> drop </a>)
+				</td>
+			</tr>
+			#{/list}
+		</tbody>
+	</table>
+	#{/if}
+</section>
