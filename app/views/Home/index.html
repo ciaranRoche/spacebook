@@ -1,15 +1,17 @@
 #{extends 'main.html' /} #{set title:'Home' /}
 
 <section class="ui container">
-	<nav id="headfont" class="ui blue inverted stackable menu">
-		<header class="header item"> Spacebook </header>
-		<div class="right menu">
-			<a class="active item" href="/home">Home</a>
-			</li> <a class="item" href="/members">Members</a> <a class="item"
-				href="/profile">Profile</a> <a class="item" href="/blog">Blog</a> <a
-				class="item" href="/logout">Logout</a>
-		</div>
-	</nav>
+<nav id="headfont" class="ui blue inverted menu">
+  <header class="header item"> Spacebook </header>
+  <div class="right menu">
+    <a class="active item" href="/home">Home</a>
+    <a class="item" href="/members">Members</a>
+    <a class="item" href="/profile">Profile</a>
+    <a class="item" href="/blog">Blog</a>
+    <a class="item" href="/editprofile">Account Settings</a>   
+    <a class="item" href="/logout">Logout</a>
+  </div>
+</nav>
 
 
 	<h1 id="headfont" class="ui blue block header">${user.firstName}

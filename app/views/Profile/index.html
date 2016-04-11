@@ -1,13 +1,15 @@
 #{extends 'main.html' /}
 #{set title:'Profile' /}
 
-<nav class="ui inverted menu">
+<section class="ui container">
+<nav id="headfont" class="ui blue inverted menu">
   <header class="header item"> Spacebook </header>
   <div class="right menu">
-    <a class="item" href="/home">Home</a></li>
+    <a class="item" href="/home">Home</a>
     <a class="item" href="/members">Members</a>
     <a class="active item" href="/profile">Profile</a>
-    <a class="item" href="/blog">Blog</a>    
+    <a class="item" href="/blog">Blog</a>
+    <a class="item" href="/editprofile">Account Settings</a>   
     <a class="item" href="/logout">Logout</a>
   </div>
 </nav> 
@@ -23,3 +25,6 @@
     </div>
   </div>
 </section>
+</section>
+
+
