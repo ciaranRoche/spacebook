@@ -15,6 +15,7 @@
 
   <h1 id="headfont" class="ui blue header">Spacebook</h1>
   <h3 id="headfont" class="ui blue header">Welcome along to Springfields Social Media</h3>
+  <a id="headfont" class="ui big blue basic button" href="/login">Log In</a>
   </div>
  
   <div class="column">
@@ -27,7 +28,7 @@
 					</div>
         <div class="content">
           ${user.firstName} ${user.lastName}: : ${user.statusText} 
-           <a href="publicblog/${user.id}">(blog)</a>
+           <a class="ui tiny blue basic button" href="publicblog/${user.id}">Blog</a>
         </div>
       </div>
     #{/list}
