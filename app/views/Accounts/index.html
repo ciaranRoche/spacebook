@@ -10,7 +10,28 @@
   </div>
 </nav> 
 
-<section id="headfont" class="ui raised segment">
-  <p> Signup or Log in to the Spacebook Service </p>
+<section id="headfont" class="ui two column middle aligned grid raised form segment">
+<div id="landing" class="column">
+
+  <h1 id="headfont" class="ui blue header">Spacebook</h1>
+  <h3 id="headfont" class="ui blue header">Welcome along to Springfields Social Media</h3>
+  </div>
+ 
+  <div class="column">
+  <h2 id="headfont" class="ui blue block header" >SpaceBook Users Blog`s  </h2>
+  <div class="ui list"> 
+    #{list items:users, as:'user'}
+      <div class="ui item"> 
+        <div class="ui avatar image">
+						<img src="/profile/getthumbnail/${user.id}">
+					</div>
+        <div class="content">
+          ${user.firstName} ${user.lastName}: : ${user.statusText} 
+           <a href="publicblog/${user.id}">(blog)</a>
+        </div>
+      </div>
+    #{/list}
+  </div>
+  </div>
 </section>
 </section>

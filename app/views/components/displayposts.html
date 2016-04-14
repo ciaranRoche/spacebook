@@ -1,4 +1,5 @@
 <section class="ui stacked segment">
+<h1 id="headfont" class="ui blue block header">${user.firstName} ${user.lastName}'s Blog</h1>
 #{if user.posts.size() > 0}
   <h4 class="ui blue block header">Published Posts</h4>
   #{list items:user.posts, as:'post'}

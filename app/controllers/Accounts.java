@@ -21,15 +21,19 @@ public class Accounts extends Controller
     render();
   }
 
-  public static void logout()
+  public static void logout(boolean online)
   {
+	  online=false;
     session.clear();
     index();
   }
 
   public static void index()
   {
-    render();
+
+	    List<User> users = User.findAll();
+	    render(users);
+        //render();
   }
 
   public static User getLoggedInUser()
