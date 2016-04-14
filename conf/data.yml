@@ -12,16 +12,16 @@ User(marge):
     lastName: Simpson
     email: marge@simpson.com
     password: secret
-    nationality: America
-    age: 48
-
+    nationality: American
+    age: 38
+    
 User(homer):
     firstName: Homer
     lastName: Simpson
     email: homer@simpson.com
     password: secret
-    nationality: America
-    age: 49
+    nationality: American
+    age: 39
               
 User(bart):
     firstName: Bart
@@ -131,6 +131,8 @@ User(homer):
      lastName: Simpson
      email: homer@simpson.com
      password: secret
+     nationality: America
+     age: 39
      friendships:
                  - friend1
                  - friend2
@@ -141,6 +143,8 @@ User(marge):
     lastName: Simpson
     email: marge@simpson.com
     password: secret
+    nationality: America
+    age: 38
     friendships:
                 - friend3                
                 
@@ -149,5 +153,7 @@ User(bart):
     lastName: Simpson
     email: bart@simpson.com
     password: secret
+    nationality: America
+    age: 10
     friendships:
                 - friend4 
