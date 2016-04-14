@@ -1,12 +1,16 @@
+<section class="ui container">
 <section class="ui raised segment">
   <div class="ui list"> 
     #{list items:users, as:'user'}
       <div class="ui item"> 
-        <i class="user icon"></i>
+        <div class="ui avatar image">
+						<img src="/profile/getthumbnail/${user.id}">
+					</div>
         <div class="content">
           ${user.firstName} ${user.lastName}: : ${user.statusText}  <a href="members/follow/${user.id}"> (follow) </a> 
         </div>
       </div>
     #{/list}
   </div>
+</section>
 </section>

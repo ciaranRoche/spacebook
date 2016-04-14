@@ -22,6 +22,7 @@ POST    /home/changestatus                      Home.changeStatus
 # Members page
 GET     /members                                Members.index
 GET     /members/follow/{id}                    Members.follow
+GET     /members/online/{id}                    Members.online
 
 # Profile page
 GET     /profile                                Profile.index

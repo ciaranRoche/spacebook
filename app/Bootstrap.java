@@ -121,11 +121,11 @@ public class Bootstrap extends Job
       abe2.thumbnailPicture = blob13;
       abe2.save();
       
-      String thumbnail2 = "public/images/thumbnails/bart.gif";
-      Blob blob14 = new Blob();
-      blob14.set(new FileInputStream(thumbnail2), MimeTypes.getContentType(thumbnail2));
+      String thumbnail21 = "public/images/thumbnails/bart.gif";
+      Blob blob141 = new Blob();
+      blob141.set(new FileInputStream(thumbnail21), MimeTypes.getContentType(thumbnail21));
       User bart2 = User.findByEmail("bart@simpson.com");
-      bart2.thumbnailPicture = blob12;
+      bart2.thumbnailPicture = blob141;
       bart2.save();
       
       String thumbnail3 = "public/images/thumbnails/ComicBookGuy.gif";

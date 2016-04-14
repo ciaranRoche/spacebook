@@ -1,6 +1,7 @@
 #{extends 'main.html' /}
 #{set title:'Blog' /}
 
+<section class="ui container">
 <nav id="headfont" class="ui blue inverted menu">
   <header class="header item"> Spacebook </header>
   <div class="right menu">
@@ -13,14 +14,15 @@
   </div>
 </nav> 
 
-<h1 class="ui inverted teal block header" >Blog  </h1>
+<h1 id="headfont" class="ui blue block header" >Blog  </h1>
 <section class="ui two column grid segment">
   <div class="row">
-    <div class="ui column">
+    <div id="font" class="ui column">
       #{include "components/createpost.html" /} 
     </div>
-    <div class="column">
+    <div id="font" class="column">
       #{include "components/displayposts.html" /} 
     </div>
   </div>
+</section>
 </section>
