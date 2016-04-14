@@ -174,7 +174,7 @@ public class Bootstrap extends Job
       Blob blob21 = new Blob();
       blob21.set(new FileInputStream(thumbnail9), MimeTypes.getContentType(thumbnail9));
       User moe2 = User.findByEmail("moe@simpson.com");
-      moe2.thumbnailPicture = blob19;
+      moe2.thumbnailPicture = blob21;
       moe2.save();
       
       String thumbnail10 = "public/images/thumbnails/ned.gif";

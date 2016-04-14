@@ -1,43 +1,46 @@
 <section class="ui stacked segment">
-  <a href="/editprofile" class="ui button"> Edit </a>
-  <table class="ui table segment">
-    <thead>
-      <tr>
-        <th>Email</th>
-        <th>Nationality</th>
-        <th>Age</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>${user.email}</td>
-        <td>${user.nationality}</td>
-        <td>${user.age}</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="ui medium image">
-    <label class="ui ribbon label">Profile Image</label>
-    <img src="/profile/getpicture/${user.id}">
-  </div>  
-  <section class="ui raised form segment">
-    <form action="/profile/uploadpicture/${user.id}" method="post" enctype="multipart/form-data">     
-      <div class="ui field">
-        <input type="file" name="picture">  </input> 
-     </div>     
-     <button class="ui blue submit button"> Upload</button>       
-    </form>        
-  </section>
-  <div class="ui avatar image">
-    <label class="ui ribbon label">Thumbnail Image</label>
-    <img src="/profile/getthumbnail/${user.id}">
-  </div>
-  <section class="ui raised form segment">
-    <form action="/profile/uploadthumbnail/${user.id}" method="post" enctype="multipart/form-data">     
-      <div class="ui field">
-        <input type="file" name="picture">  </input> 
-     </div>     
-     <button class="ui blue submit button"> Upload</button>       
-    </form>        
-  </section>      
-</section>  
+	<table class="ui table segment">
+		<thead>
+			<tr>
+				<th>Email</th>
+				<th>Nationality</th>
+				<th>Age</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>${user.email}</td>
+				<td>${user.nationality}</td>
+				<td>${user.age}</td>
+			</tr>
+		</tbody>
+	</table>
+	<h4 class="ui blue block header">Profile Image</h4>
+	<div class="ui medium image">
+		<img id="landing" src="/profile/getpicture/${user.id}">
+	</div>
+	<section class="ui raised form segment">
+	<h5 class="ui blue block header">Change Profile Picture</h5>
+		<form action="/profile/uploadpicture/${user.id}" method="post"
+			enctype="multipart/form-data">
+			<div class="ui field">
+				<input type="file" name="picture"> </input>
+			</div>
+			<button class="ui blue submit button">Upload</button>
+		</form>
+	</section>
+	<h4 class="ui blue block header">Avatar</h4>
+	<div class="ui avatar image">
+		<img id="landing" src="/profile/getthumbnail/${user.id}">
+	</div>
+	<section class="ui raised form segment">
+	<h5 class="ui blue block header">Change Avatar</h5>
+		<form action="/profile/uploadthumbnail/${user.id}" method="post"
+			enctype="multipart/form-data">
+			<div class="ui field">
+				<input type="file" name="picture"> </input>
+			</div>
+			<button class="ui blue submit button">Upload</button>
+		</form>
+	</section>
+</section>
