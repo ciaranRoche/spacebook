@@ -1,0 +1,30 @@
+#{extends 'main.html' /}
+#{set title:'PublicBlog' /}
+
+<section class="ui container">
+<nav id="headfont" class="ui blue inverted menu">
+  <header class="header item"> Spacebook </header>
+  <div class="right menu">
+    <a class="item" href="/home">Home</a>
+    <a class="item" href="/members">Members</a>
+    <a class="item" href="/profile">Profile</a>
+    <a class="active item" href="/blog">Blog</a>
+    <a class="item" href="/editprofile">Account Settings</a>   
+    <a class="item" href="/logout">Logout</a>
+  </div>
+</nav> 
+
+<h1 id="headfont" class="ui blue block header" >Blog  </h1>
+<section class="ui two column grid segment">
+
+    <div id="font" class="column">
+      #{include "components/displayposts.html" /} 
+    </div>
+
+  <div id="landing" class="column">
+ 	<h1>Members only blog test</h1>
+  	<h2 id="font" class="ui blue header">Log in for access to comments</h2>
+  	<a class="ui big blue basic button" href="/Accounts/login">Log In</a>
+  </div>
+</section>
+</section>
