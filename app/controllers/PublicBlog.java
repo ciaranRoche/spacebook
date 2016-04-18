@@ -12,10 +12,10 @@ public class PublicBlog  extends Controller
 {
 	 public static void visit(Long id)
 	  {
-	    //User currentUser = Accounts.getLoggedInUser();
-	    
+		User currentUser = Accounts.getLoggedInUser(); 
+		 
 	    User user = User.findById(id);
-	    //Logger.info("Just visiting the page for " + user.firstName + ' ' + user.lastName);
+	    Logger.info("Just visiting the blog for " + user.firstName + ' ' + user.lastName);
 	    render(user);
 	  }
 

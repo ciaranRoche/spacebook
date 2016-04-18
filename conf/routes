@@ -47,6 +47,9 @@ POST  /blog/newpost                             Blog.newPost
 # Public Blogs
 GET   /publicblog/{id}                          PublicBlog.visit
 
+# Members Blog
+GET   /membersblog/{id}                          MembersBlog.visit
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 
