@@ -16,11 +16,11 @@ public class Blog  extends Controller
     render(user);
   }
   
-  public static void newPost(String title, String content)
+  public static void newPost(User author, String title, String content)
   {
     User user = Accounts.getLoggedInUser();
     
-    Post post = new Post (title, content);
+    Post post = new Post (user, title, content);
     post.save();
     user.posts.add(post);
     user.save();
@@ -28,4 +28,6 @@ public class Blog  extends Controller
     Logger.info ("title:" + title + " content:" + content);
     index();
   }
+  
+  
 }

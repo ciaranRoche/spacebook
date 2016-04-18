@@ -28,8 +28,8 @@ public class BlogTest extends UnitTest
   public void setup()
   {
     bob   = new User("bob", "jones", "bob@jones.com", "secret", 20, "irish");
-    post1 = new Post("Post Title 1", "This is the first post content");
-    post2 = new Post("Post Title 2", "This is the second post content");
+    post1 = new Post(bob,"Post Title 1", "This is the first post content");
+    post2 = new Post(bob,"Post Title 2", "This is the second post content");
     bob.save();
     post1.save();
     post2.save();
@@ -46,15 +46,21 @@ public class BlogTest extends UnitTest
   @Test
   public void testCreatePost()
   {
-    bob.posts.add(post1);
-    bob.save();
-
-    User user = User.findByEmail("bob@jones.com");
-    List<Post> posts = user.posts;
-    assertEquals(1, posts.size());
-    Post post = posts.get(0);
-    assertEquals(post.title, "Post Title 1");
-    assertEquals(post.content, "This is the first post content");
+	    User bob = new User("bob", "jones", "bob@jones.com", "secret", 20, "irish").save();
+	    
+	    new Post(bob, "My first post", "Hello world").save();
+	    
+	    assertEquals(1, Post.count());
+	    
+	    List<Post> bobPosts = Post.find("byAuthor", bob).fetch();
+	 
+	    assertEquals(1, bobPosts.size());
+	    Post firstPost = bobPosts.get(0);
+	    assertNotNull(firstPost);
+	    assertEquals(bob, firstPost.author);
+	    assertEquals("My first post", firstPost.title);
+	    assertEquals("Hello world", firstPost.content);
+	    assertNotNull(firstPost.postedAt);
   }
 
   @Test
@@ -79,13 +85,13 @@ public class BlogTest extends UnitTest
   @Test
   public void testDeletePost()
   {
-    Post post3 = new Post("Post Title 3", "This is the third post content");
+    Post post3 = new Post(bob,"Post Title 3", "This is the third post content");
     post3.save();
     bob.posts.add(post3);
     bob.save();
     
     User user = User.findByEmail("bob@jones.com");
-    assertEquals(1, user.posts.size());  
+    assertEquals(2, user.posts.size());  
     Post post = user.posts.get(0);
 
     user.posts.remove(0);
@@ -94,5 +100,6 @@ public class BlogTest extends UnitTest
     
     User anotherUser = User.findByEmail("bob@jones.com");
     assertEquals(0, anotherUser.posts.size());   
-   }  
+   } 
+  
 }

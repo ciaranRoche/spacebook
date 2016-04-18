@@ -12,8 +12,12 @@ public class MembersBlog  extends Controller
 {
 	 public static void visit(Long id)
 	  {
-	    User user = User.findById(id);
-	    render(user);
+		 
+		User currentUser = Accounts.getLoggedInUser(); 
+	    
+		User user = User.findById(id);
+		Logger.info("Just visiting the blog for " + user.firstName + ' ' + user.lastName);
+		render(user);
 	  }
-
+	 
 }

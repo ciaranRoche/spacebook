@@ -20,8 +20,9 @@
  
   <div class="column">
   <h2 id="headfont" class="ui blue block header" >SpaceBook Users Blog`s  </h2>
+  
   <div class="ui list"> 
-    #{list items:users, as:'user'}
+    #{list items:users, as:'user'} #{if user.posts.size() > 0}
       <div class="ui item"> 
         <div class="ui avatar image">
 						<img src="/profile/getthumbnail/${user.id}">
@@ -31,7 +32,7 @@
            <a class="ui tiny blue basic button" href="publicblog/${user.id}">Blog</a>
         </div>
       </div>
-    #{/list}
+    #{/if} #{/list} 
   </div>
   </div>
 </section>
