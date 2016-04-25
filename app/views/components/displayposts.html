@@ -12,11 +12,11 @@
   
   #{if user.posts.size() > 0}
   <h4 class="ui blue block header">Comments</h4>
-  #{list items:post.comments, as:'comment'}
+  #{list items:post.comments.reverse(), as:'comment'}
   <p>${comment.author.firstName} ${comment.content}</p>
   #{/list}
   
-  <form action="/membersblog/sendcomment/${user.id}/${post.id}" method="POST">
+  <form action="/publicblog/sendcomment/${user.id}/${post.id}" method="POST">
   <div class="field">
   	<textarea name="content" placeholder="Content"></textarea>
   </div>

@@ -46,11 +46,7 @@ POST  /blog/newpost                             Blog.newPost
 
 # Public Blogs
 GET   /publicblog/{id}                          PublicBlog.visit
-POST  /publicblog/sendcomment/{id}/{postid}              PublicBlog.sendComment
-
-# Members Blog
-GET   /membersblog/{id}                          MembersBlog.visit
-POST  /membersblog/sendcomment/{id}/{postid}              MembersBlog.sendComment
+POST  /publicblog/sendcomment/{id}/{postid}     PublicBlog.sendComment
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
