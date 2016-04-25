@@ -1,14 +1,37 @@
-<section class="ui stacked segment">
-  <h4 id="headfont" class="ui blue block header"> Status</h4>
-  <div id="font" class="ui message">
-    <p> ${user.statusText} </p>
-  </div>
-   <section class="ui form segment">
-    <form action="/profile/changestatus" method="POST">
-      <div class="field">
-        <textarea name="statusText"></textarea>
-      </div>
-      <button class="ui button blue submit labeled icon"><i class="icon edit"></i> Update </button>
-    </form>
-  </section>
-</section>  
+s<section class="ui stacked segment">
+	<h4 id="headfont" class="ui blue dividing header">Status</h4>
+	<div id="font" class="ui small icon message">
+		<p>
+		<div class="ui avatar image">
+			<img src="/profile/getthumbnail/${user.id}">
+		</div>
+		${user.statusText}
+		</p>
+	</div>
+	<section class="ui form segment">
+		<form action="/profile/changestatus" method="POST">
+			<div class="field">
+				<textarea name="statusText"></textarea>
+			</div>
+			<button class="ui button blue submit labeled icon">
+				<i class="icon edit"></i> Update
+			</button>
+		</form>
+	</section>
+	<h4 class="ui blue dividing header">Avatar</h4>
+	<div class="ui avatar image">
+		<img id="landing" src="/profile/getthumbnail/${user.id}">
+	</div>
+	<section class="ui raised form segment">
+		<h5 class="ui blue dividing header">Change Avatar</h5>
+		<form action="/profile/uploadthumbnail/${user.id}" method="post"
+			enctype="multipart/form-data">
+			<div class="ui field">
+				<input type="file" name="picture"> </input>
+			</div>
+			<button class="ui blue submit labeled icon button">
+				<i class="share icon"></i>Upload
+			</button>
+		</form>
+	</section>
+</section>

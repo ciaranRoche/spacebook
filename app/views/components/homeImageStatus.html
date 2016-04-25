@@ -1,18 +1,20 @@
 
 <section id="headfont" class="ui stacked segment">
-	<h4 id="headfont" class="ui blue block header">Profile Picture
+	<h4 id="headfont" class="ui blue dividing header">Profile Picture
 		${user.firstName}</h4>
 	<div class="ui centered small bordered image">
 		<img src="/profile/getpicture/${user.id}">
 	</div>
-	<h5 id="headfont" class="ui blue block header">Edit Profile
+	<h5 id="headfont" class="ui blue dividing header">Edit Profile
 		Picture</h5>
 	<form action="/home/uploadpicture/${user.id}" method="post"
 		enctype="multipart/form-data">
 		<div id="headfont" class="ui field">
 			<input type="file" name="picture"> </input>
 		</div>
-		<button id="headfont" class="ui blue submit button">Upload</button>
+		<button id="headfont" class="ui blue submit button labeled icon">
+			<i class="upload icon"></i>Upload
+		</button>
 	</form>
 
 </section>

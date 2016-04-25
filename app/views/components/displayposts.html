@@ -1,29 +1,40 @@
 <section class="ui stacked segment">
-<h1 id="headfont" class="ui blue block header">${user.firstName} ${user.lastName}'s Blog</h1>
-#{if user.posts.size() > 0}
-  <h4 class="ui blue block header">Published Posts</h4>
-  #{list items:user.posts.reverse(), as:'post'}
-    <h5 class="ui blue block header"> ${post.title}:</h5>
-    <p> 
-      ${post.content}
-    </p>
-  #{/list}
-  #{/if}
-  
-  #{if user.posts.size() > 0}
-  <h4 class="ui blue block header">Comments</h4>
-  #{list items:post.comments.reverse(), as:'comment'}
-  <p>${comment.author.firstName} ${comment.content}</p>
-  #{/list}
-  
-  <form action="/publicblog/sendcomment/${user.id}/${post.id}" method="POST">
-  <div class="field">
-  	<textarea name="content" placeholder="Content"></textarea>
-  </div>
-  <button class="ui button blue sumbit labeled icon"><i class="icon edit"></i>Comment</button>
-  </form>
+	<h1 id="headfont" class="ui blue top attached header">
+		<div class="ui avatar image">
+			<img src="/profile/getthumbnail/${user.id}">
+		</div>
+		${user.firstName} ${user.lastName}'s Blog
+	</h1>
+	#{if user.posts.size() > 0}
+	<h4 id="headfont" class="ui blue dividing header">Published Posts</h4>
+	#{list items:user.posts.reverse(), as:'post'}
+	<h5 id="headfont" class="ui blue dividing header">${post.title}:</h5>
+	<p>${post.content}</p>
+	#{/list} #{/if} #{if user.posts.size() > 0}
+	<h4 id="headfont" class="ui blue dividing header">Comments</h4>
+	#{list items:post.comments.reverse(), as:'comment'}
+
+	<p>
+	<div class="ui avatar image">
+		<img src="/profile/getthumbnail/${comment.author.id}">
+	</div>
+	<a id="font" href="/publicprofile/${comment.author.id}">
+		${comment.author.firstName}</a> : ${comment.content}
+	</p>
+	#{/list}
+	<h5 id="headfont" class="ui blue dividing header">Add a Comment</h5>
+	<section class="ui form segment">
+		<form action="/publicblog/sendcomment/${user.id}/${post.id}"
+			method="POST">
+			<div class="field">
+				<textarea name="content" placeholder="Add A Comment"></textarea>
+			</div>
+			<button id="headfont" class="ui button blue sumbit labeled icon">
+				<i class="icon edit"></i>Comment
+			</button>
+		</form>
+	</section>
 </section>
 #{/if}
 
 
-    

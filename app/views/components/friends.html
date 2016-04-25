@@ -1,5 +1,5 @@
 <section class="ui stacked segment">
-	<h4 id="headfont" class="ui blue block header">
+	<h4 id="headfont" class="ui blue dividing header">
 		<i class="users icon"></i>Friends (${user.friendships.size()})
 	</h4>
 	#{if user.friendships.size() > 0}
@@ -18,8 +18,7 @@
 				<td>(<a href="/home/drop/${friendship.targetUser.id}"><i
 						class="remove user icon"></i> drop </a>)
 				</td>
-				<td>
-					<a href="/publicblog/${friendship.targetUser.id}">(blog)</a>
+				<td><a href="/publicblog/${friendship.targetUser.id}">(blog)</a>
 				</td>
 			</tr>
 			#{/list}

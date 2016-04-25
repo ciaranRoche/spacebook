@@ -1,49 +1,50 @@
-#{extends 'main.html' /}
-#{set title:'Signup for Spacebook' /}
+#{extends 'main.html' /} #{set title:'Signup for Spacebook' /}
 <section class="ui container">
-<nav class="ui blue inverted menu">
-  <header id="headfont" class="header item"> Spacebook </header>
-  <div class="right menu">
-    <a id="headfont" class="active item" href="/signup"> Signup  </a>
-    <a id="headfont" class="item" href="/login">  Login   </a>
-  </div>
-</nav> 
+	<nav class="ui blue inverted menu">
+		<header id="headfont" class="header item"> Spacebook </header>
+		<div class="right menu">
+			<a id="headfont" class="active item" href="/signup"> Signup </a> <a
+				id="headfont" class="item" href="/login"> Login </a>
+		</div>
+	</nav>
 
-<section class="ui two column middle aligned grid raised form segment">
-  <div id="font" class="column">
-	  <form action="/register" method="POST">
-	    <div class="two fields">
-	      <div class="field">
-	        <label>First Name</label>
-	        <input placeholder="First Name" type="text" name="firstName">
-	      </div>
-	      <div class="field">
-	        <label>Last Name</label>
-	        <input placeholder="Last Name" type="text" name="lastName">
-	      </div>
-	    </div>
-	    <div class="two fields">
-	      <div class="field">
-	        <label>Nationality</label>
-	        <input placeholder="Nationality" type="text" name="nationality">
-	      </div>
-	      <div class="field">
-	        <label>Age</label>
-	        <input placeholder="Age" type="text" name="age">
-	      </div>
-	    </div>    <div class="field">
-	      <label>Email</label>
-	      <input placeholder="Email" type="text" name="email">
-	    </div>
-	    <div class="field">
-	      <label>Password</label>
-	      <input type="password" name="password">
-	    </div>
-	    <button id="headfont" class="ui blue submit button">Submit</button>
-	  </form>
-	</div>
-	<div class="column">
-    <img src="/public/images/spacebookLogo.gif" class="ui fluid image">
-  </div>
-</section> 
-</section> 
+
+	<section class="ui two column middle aligned grid raised form segment">
+		<div id="font" class="column">
+			<form action="/register" method="POST">
+				<div class="two fields">
+					<div class="field">
+						<label>First Name</label> <input placeholder="First Name"
+							type="text" name="firstName">
+					</div>
+					<div class="field">
+						<label>Last Name</label> <input placeholder="Last Name"
+							type="text" name="lastName">
+					</div>
+				</div>
+				<div class="two fields">
+					<div class="field">
+						<label>Nationality</label> <input placeholder="Nationality"
+							type="text" name="nationality">
+					</div>
+					<div class="field">
+						<label>Age</label> <input placeholder="Age" type="text" name="age">
+					</div>
+				</div>
+				<div class="field">
+					<label>Email</label> <input placeholder="Email" type="text"
+						name="email">
+				</div>
+				<div class="field">
+					<label>Password</label> <input type="password" name="password">
+				</div>
+				<button id="headfont" class="ui blue submit button labeled icon">
+					<i class="share icon"></i>Submit
+				</button>
+			</form>
+		</div>
+		<div class="column">
+			<img src="/public/images/spacebookLogo.gif" class="ui fluid image">
+		</div>
+	</section>
+</section>

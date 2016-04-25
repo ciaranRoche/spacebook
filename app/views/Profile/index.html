@@ -1,30 +1,27 @@
-#{extends 'main.html' /}
-#{set title:'Profile' /}
+#{extends 'main.html' /} #{set title:'Profile' /}
 
 <section class="ui container">
-<nav id="headfont" class="ui blue inverted menu">
-  <header class="header item"> Spacebook </header>
-  <div class="right menu">
-    <a class="item" href="/home">Home</a>
-    <a class="item" href="/members">Members</a>
-    <a class="active item" href="/profile">Profile</a>
-    <a class="item" href="/blog">Blog</a>
-    <a class="item" href="/editprofile">Account Settings</a>   
-    <a class="item" href="/logout">Logout</a>
-  </div>
-</nav> 
+	<nav id="headfont" class="ui blue inverted menu">
+		<header class="header item"> Spacebook </header>
+		<div class="right menu">
+			<a class="item" href="/home">Home</a> <a class="item" href="/members">Members</a>
+			<a class="active item" href="/profile">Profile</a> <a class="item"
+				href="/blog">Blog</a> <a class="item" href="/editprofile">Account
+				Settings</a> <a class="item" href="/logout">Logout</a>
+		</div>
+	</nav>
 
-<h1 id="headfont" class="ui blue block header" >${user.firstName} ${user.lastName}'s Profile</h1>
-<section id="font" class="ui  two column grid segment">
-  <div class="row">
-    <div class="column">
-      #{include "components/profileimages.html" /} 
-    </div>
-    <div class="column">
-      #{include "components/statusupdate.html" /}   
-    </div>
-  </div>
-</section>
+	<h1 id="headfont" class="ui blue top attached header">${user.firstName}
+		${user.lastName}'s Profile</h1>
+
+
+	<div class="ui stackable grid">
+		<div class="eight wide column">#{include
+			"components/profileimages.html" /}</div>
+
+		<div class="eight wide column">#{include
+			"components/statusupdate.html" /}</div>
+	</div>
 </section>
 
 

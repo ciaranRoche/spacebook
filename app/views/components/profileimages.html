@@ -15,32 +15,21 @@
 			</tr>
 		</tbody>
 	</table>
-	<h4 class="ui blue block header">Profile Image</h4>
+	<h4 class="ui blue dividing header">Profile Image</h4>
 	<div class="ui medium image">
 		<img id="landing" src="/profile/getpicture/${user.id}">
 	</div>
 	<section class="ui raised form segment">
-	<h5 class="ui blue block header">Change Profile Picture</h5>
+		<h5 class="ui blue dividing header">Change Profile Picture</h5>
 		<form action="/profile/uploadpicture/${user.id}" method="post"
 			enctype="multipart/form-data">
 			<div class="ui field">
 				<input type="file" name="picture"> </input>
 			</div>
-			<button class="ui blue submit button">Upload</button>
+			<button class="ui blue submit labeled icon button">
+				<i class="share icon"></i>Upload
+			</button>
 		</form>
 	</section>
-	<h4 class="ui blue block header">Avatar</h4>
-	<div class="ui avatar image">
-		<img id="landing" src="/profile/getthumbnail/${user.id}">
-	</div>
-	<section class="ui raised form segment">
-	<h5 class="ui blue block header">Change Avatar</h5>
-		<form action="/profile/uploadthumbnail/${user.id}" method="post"
-			enctype="multipart/form-data">
-			<div class="ui field">
-				<input type="file" name="picture"> </input>
-			</div>
-			<button class="ui blue submit button">Upload</button>
-		</form>
-	</section>
+
 </section>

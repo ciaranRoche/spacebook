@@ -1,14 +1,18 @@
 <section class="ui stacked segment">
-  <h4 id="headfont" class="ui blue block header"> Status</h4>
-  <div id="font" class="ui message">
-    <p> ${user.statusText} </p>
-  </div>
-   <section class="ui form segment">
-    <form action="/home/changestatus" method="POST">
-      <div class="field">
-        <textarea name="statusText"></textarea>
-      </div>
-      <button id="headfont" class="ui button blue submit labeled icon"><i class="icon edit"></i> Update </button>
-    </form>
-  </section>
-</section>  
+	<h4 id="headfont" class="ui blue dividing header">Status</h4>
+	<div id="font" class="ui icon message">
+		<p>
+			<i class="comment outline icon"></i> ${user.statusText}
+		</p>
+	</div>
+	<section class="ui form segment">
+		<form action="/home/changestatus" method="POST">
+			<div class="field">
+				<textarea name="statusText"></textarea>
+			</div>
+			<button id="headfont" class="ui button blue submit labeled icon">
+				<i class="icon edit"></i> Update
+			</button>
+		</form>
+	</section>
+</section>
