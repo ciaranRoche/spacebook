@@ -44,5 +44,6 @@ public class UserTest extends UnitTest
   {
     User alice = User.findByEmail("alice@jones.com");
     assertNull (alice);
-  }  
+  } 
+  
 }

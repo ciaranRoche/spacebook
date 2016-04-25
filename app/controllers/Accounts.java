@@ -9,7 +9,7 @@ import models.*;
 
 public class Accounts extends Controller
 {
-	public boolean online = false;
+	
 	
   public static void signup()
   {
@@ -23,9 +23,12 @@ public class Accounts extends Controller
 
   public static void logout(boolean online)
   {
-	  online=false;
-    session.clear();
-    index();
+	  User user = Accounts.getLoggedInUser();
+	  user.online=false;
+	  user.save();
+	  
+      session.clear();
+      index();
   }
 
   public static void index()
@@ -59,7 +62,7 @@ public class Accounts extends Controller
     index();
   }
 
-  public static void authenticate(String email, String password, boolean online)
+  public static void authenticate(String email, String password)
   {
     Logger.info("Attempting to authenticate with " + email +  " : " + password);
 
@@ -69,8 +72,9 @@ public class Accounts extends Controller
     {
       Logger.info("Authentication successful");
       session.put("logged_in_userid", user.id);
-      online = true;
-      if(online == true){
+      user.online = true;
+      user.save();
+      if(user.online == true){
       	Logger.info("User: "+email+" is now active", user.id);
       }
       Home.index();  

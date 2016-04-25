@@ -60,7 +60,6 @@ public class BlogTest extends UnitTest
 	    assertEquals(bob, firstPost.author);
 	    assertEquals("My first post", firstPost.title);
 	    assertEquals("Hello world", firstPost.content);
-	    assertNotNull(firstPost.postedAt);
   }
 
   @Test

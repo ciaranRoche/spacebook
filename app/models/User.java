@@ -92,6 +92,6 @@ public class User extends Model
     outbox.add(message);
     to.inbox.add(message);
     message.save();
-  }  
+  }
   
 }
