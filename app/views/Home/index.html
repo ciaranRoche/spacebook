@@ -15,19 +15,20 @@
 
 	<h1 id="headfont" class="ui blue top attached header">${user.firstName}
 		${user.lastName}</h1>
-	<section class="ui blue two column grid stackable segment">
+	<div class="ui stackable grid">
 		<div class="row">
-			<div class="ui column">#{include
+			<div class="eight wide column">#{include
 				"components/homeImageStatus.html" /}</div>
-			<div class="column">#{include
+			<div class="eight wide column">#{include
 				"components/homestatusupdate.html" /}</div>
 		</div>
-
 		<div class="row">
-			<div class="ui column">#{include "components/friends.html" /}</div>
-			<div class="column">#{include "components/messages.html" /}</div>
+			<div class="eight wide column">#{include
+				"components/friends.html" /}</div>
+			<div class="eight wide column">#{include
+				"components/messages.html" /}</div>
 		</div>
-	</section>
+	</div>
 </section>
 
 

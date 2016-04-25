@@ -1,28 +1,22 @@
-#{extends 'main.html' /}
-#{set title:'Blog' /}
+#{extends 'main.html' /} #{set title:'Blog' /}
 
 <section class="ui container">
-<nav id="headfont" class="ui blue inverted menu">
-  <header class="header item"> Spacebook </header>
-  <div class="right menu">
-    <a class="item" href="/home">Home</a>
-    <a class="item" href="/members">Members</a>
-    <a class="item" href="/profile">Profile</a>
-    <a class="active item" href="/blog">Blog</a>
-    <a class="item" href="/editprofile">Account Settings</a>   
-    <a class="item" href="/logout">Logout</a>
-  </div>
-</nav> 
+	<nav id="headfont" class="ui blue inverted menu">
+		<header class="header item"> Spacebook </header>
+		<div class="right menu">
+			<a class="item" href="/home">Home</a> <a class="item" href="/members">Members</a>
+			<a class="item" href="/profile">Profile</a> <a class="active item"
+				href="/blog">Blog</a> <a class="item" href="/editprofile">Account
+				Settings</a> <a class="item" href="/logout">Logout</a>
+		</div>
+	</nav>
 
-<h1 id="headfont" class="ui blue top attached header" >Blog  </h1>
-<section class="ui two column grid segment">
-  <div class="row">
-    <div id="font" class="ui column">
-      #{include "components/createpost.html" /} 
-    </div>
-    <div id="font" class="column">
-      #{include "components/displayposts.html" /} 
-    </div>
-  </div>
+	<h1 id="headfont" class="ui blue top attached header">Blog</h1>
+	<div class="ui stackable grid">
+		<div id="font" class="eight wide column">#{include
+			"components/createpost.html" /}</div>
+		<div id="font" class="eight wide column">#{include
+			"components/displayposts.html" /}</div>
+	</div>
 </section>
-</section>
+

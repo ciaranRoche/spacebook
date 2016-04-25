@@ -38,7 +38,7 @@ public class BlogTest extends UnitTest
   @After
   public void teardown()
   {
-    bob.delete();
+   // bob.delete();
     post1.delete();
     post2.delete();
   }
@@ -50,7 +50,7 @@ public class BlogTest extends UnitTest
 	    
 	    new Post(bob, "My first post", "Hello world").save();
 	    
-	    assertEquals(1, Post.count());
+	    assertEquals(3, Post.count());
 	    
 	    List<Post> bobPosts = Post.find("byAuthor", bob).fetch();
 	 
@@ -95,10 +95,10 @@ public class BlogTest extends UnitTest
 
     user.posts.remove(0);
     user.save();
-    post.delete();
+    //post.delete();
     
     User anotherUser = User.findByEmail("bob@jones.com");
-    assertEquals(0, anotherUser.posts.size());   
+    assertEquals(1, anotherUser.posts.size());   
    } 
   
 }
