@@ -7,7 +7,9 @@
 						<img src="/profile/getthumbnail/${user.id}">
 					</div>
         <div class="content">
-         ${user.online} ${user.firstName} ${user.lastName}: : ${user.statusText}  <a class="ui tiny blue basic button" href="members/follow/${user.id}"> Follow </a> 
+         #{if user.online == true}<i class="green circle icon"></i>#{/if}
+         #{if user.online == false}<i class="red circle icon"></i>#{/if} 
+         ${user.firstName} ${user.lastName}: : ${user.statusText}  <a class="ui tiny blue basic button" href="members/follow/${user.id}"> Follow </a> 
            <a class="ui tiny blue basic button" href="/membersblog/${user.id}">Blog</a>
         </div>
       </div>
