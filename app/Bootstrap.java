@@ -1,4 +1,4 @@
-import java.io.FileInputStream;
+/*import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.List;
 
@@ -106,7 +106,7 @@ public class Bootstrap extends Job
       lisa.save();
       
       /*--- Thumbnail preloads ---*/
-      
+      /*
       String thumbnail = "public/images/thumbnails/homer.gif";
       Blob blob12 = new Blob();
       blob12.set(new FileInputStream(thumbnail), MimeTypes.getContentType(thumbnail));
@@ -192,4 +192,4 @@ public class Bootstrap extends Job
       peter2.save();
     }
   }
-}
+}*/
