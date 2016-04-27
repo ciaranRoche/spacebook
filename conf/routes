@@ -3,7 +3,7 @@
 # ~~~~
 
 # Landing page
-GET    /                                        Accounts.index
+GET 	/                                        Accounts.index
 
 # Accounts
 
