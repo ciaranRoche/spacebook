@@ -8,6 +8,8 @@ import play.db.jpa.*;
 @Entity
 public class Comment extends Model {
 	
+	 public Date postedAt;
+	
 	@ManyToOne
     public User author;
      
@@ -16,11 +18,14 @@ public class Comment extends Model {
     
     @ManyToOne
     public Post post;
+
     
     public Comment(Post post, User author, String comment) {
         this.post = post;
         this.author = author;
         this.content = comment;
+ 
+        this.postedAt = new Date();
     }
  
 }

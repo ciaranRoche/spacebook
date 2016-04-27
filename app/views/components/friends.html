@@ -15,11 +15,14 @@
 				<td><a href="/publicprofile/${friendship.targetUser.id}">
 						${friendship.targetUser.firstName}
 						${friendship.targetUser.lastName} </a></td>
-				<td>(<a href="/home/drop/${friendship.targetUser.id}"><i
-						class="remove user icon"></i> drop </a>)
-				</td>
-				<td><a href="/publicblog/${friendship.targetUser.id}">(blog)</a>
-				</td>
+				<td><a id="headfont"
+					class="ui small blue basic button labeled icon"
+					href="/home/drop/${friendship.targetUser.id}"><i
+						class="remove user icon"></i>drop</a></td>
+				<td><a id="headfont"
+					class="ui small blue basic button labeled icon"
+					href="/publicblog/${friendship.targetUser.id}"><i
+						class="book icon"></i>blog</a></td>
 			</tr>
 			#{/list}
 		</tbody>

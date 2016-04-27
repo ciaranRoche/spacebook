@@ -19,7 +19,7 @@
 		<img src="/profile/getthumbnail/${comment.author.id}">
 	</div>
 	<a id="font" href="/publicprofile/${comment.author.id}">
-		${comment.author.firstName}</a> : ${comment.content}
+		${comment.author.firstName}</a> : ${comment.content} <a id="headfont" class="ui blue tag label">Posted: ${comment.postedAt.format('MMM dd')}</a> 
 	</p>
 	#{/list}
 	<h5 id="headfont" class="ui blue dividing header">Add a Comment</h5>
